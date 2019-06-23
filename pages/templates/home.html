@@ -1,0 +1,92 @@
+
+{% extends 'base.html' %} 
+
+
+{% load static %}
+   
+ {% block title %} Home  {% endblock%}
+ {% block content %}
+
+<!--- Image Slider -->
+
+<div id="slides" class="carousel slide" data-ride="carousel">
+  
+  <ul class="carousel-indicators">
+    <li data-target ="#slides" data-slide-to="0" class="active"></li>
+    <li data-target ="#slides" data-slide-to="1"></li>
+    <li data-target ="#slides" data-slide-to="2"></li>
+    <li data-target ="#slides" data-slide-to="3"></li>
+    <li data-target ="#slides" data-slide-to="4"></li>
+    <li data-target ="#slides" data-slide-to="5"></li>
+    <li data-target ="#slides" data-slide-to="6"></li>
+
+  </ul>
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'img/bkg/bkg1.jpg' %}">
+      
+      <div class="carousel-caption">
+       
+        <h2 class="display-2">Web Applications </h2>      
+        <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button"> View Demo </a>
+      </div>
+    </div>
+    
+    	<div class="carousel-item">
+	      <img src="{% static 'img/bkg/bkg2.jpg' %}">
+         <div class="carousel-caption">
+        <h2 class="display-2">Web Design </h2>       
+       
+      <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button"> View Demo </a>
+
+      </div>
+	    </div>
+	    <div class="carousel-item">
+	      <img src="{% static 'img/bkg/bkg3.jpg' %}">
+         <div class="carousel-caption">
+        <h2 class="display-2">Word/Excel Processing </h2>       
+            <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button"> View Demo </a>
+      </div>
+	    </div>
+
+	     <div class="carousel-item">
+	      <img src="{% static 'img/bkg/bkg4.jpg' %}">
+
+        <div class="carousel-caption">
+          <h2 class="display-2">Text Mining </h2>       
+
+          <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button"> View Demo </a>
+       </div>
+	    </div>
+
+	     <div class="carousel-item">
+	      <img src="{% static 'img/bkg/bkg5.jpg' %}">
+         <div class="carousel-caption">
+            <h2 class="display-2">Image Processing </h2>       
+            
+             <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button"> View Demo </a>
+
+         </div>
+	    </div>
+
+	     <div class="carousel-item">
+	      <img src="{% static 'img/bkg/bkg6.jpg' %}">
+        <div class="carousel-caption">
+            <h2 class="display-2"> Machine Learning </h2>       
+             <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button"> View Demo </a>
+         </div>
+	    </div>
+
+	     <div class="carousel-item">
+	      <img src="{% static 'img/bkg/bkg7.jpg' %}">
+         <div class="carousel-caption">
+            <h2 class="display-2"> Fun Games </h2>       
+             <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button"> View Demo </a>
+         </div>
+	    </div>
+      
+  </div>
+
+
+{% endblock %}

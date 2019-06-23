@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+ 
+
+{% load static %}
+   
+   {% block title %}  Team {% endblock%}
+
+ {% block content %}
+
+
+
+<!--- Meet the team -->
+
+
+
+<!--- Cards -->
+<div class="container-fluid padding" id ="team" style="background-image: url('{% static 'img/bkg/login.jpg' %}');  background-repeat: no-repeat;   background-attachment: fixed;" >
+  <div class="row padding">
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src= " {% static 'img/logo/Tushar.jpg' %}">
+        <div class="card-body">
+          <h4 class="card-title"> Tushar Koley </h4>
+          <p class="card-text"> Tushar has 15 years of expereince in the It industry in various technologies including Python/Django, Java, HTML, CSS, MySQl, Oracle etc.</p>
+          <a href="https://www.linkedin.com/in/tushar-koley-38978018" class="btn btn-outline-secondary"> See Profile </a>
+
+        </div>
+      </div>
+    </div>
+
+    
+</div>
+
+{% endblock%} 
+   
+

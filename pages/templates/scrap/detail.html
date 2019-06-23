@@ -1,0 +1,59 @@
+{% extends 'base.html' %} 
+
+
+{% load static %}
+   
+   {% block title %}  Serach Details {% endblock%}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+ <div class="container text-center padding justify-content-center ">
+<h2> <br> </h2>
+<h2> Search Results </h2>
+<h2> <br> </h2>
+
+ 
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+
+<div class=" text-left">
+		<table class="table">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">URL</th>
+		      <th scope="col"> Title</th>
+		      <th scope="col">Paragraphs</th>
+		      <th scope="col">Search Status</th>
+		      <th scope="col">Date</th>
+		    </tr>
+		  </thead>
+
+		  <tbody>
+
+			{% for result in index.results_set.all %}
+			  <tr>
+			  	 <th scope="row">{{ result.sl_no }}</th>
+			  	  <th scope="row">{{ index.site_url }}</th>
+			      <th scope="row">{{ result.title }}</th>
+			      <th scope="row">{{ result.paragraph }}</th>
+			      <th scope="row">{{ result.searched_status }}</th>
+			      <th scope="row">{{ result.pub_date }}</th>
+
+		   </tr>
+
+			{% endfor %}
+		 </tbody>
+		</table>
+	</div>
+
+{% endblock %}
+
+</div>
+
+
