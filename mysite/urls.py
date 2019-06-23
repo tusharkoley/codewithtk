@@ -19,6 +19,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from users import views as user_views
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,19 +27,23 @@ urlpatterns = [
     path('profile/', user_views.profile, name='profile'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
-    path('polls/', include('polls.urls')),
     path('scrap/',include('scrap.urls')),
     path('word/',include('word.urls')),
     path('image/',include('image.urls')),
+    path('games/',include('games.urls')),
+    path('team/', views.team, name ='team'),
+    path('index/', views.index, name ='index'),
 
-
+    path('contact_us/', views.contact_us, name ='contact_us'),
+    path('home/', views.home, name ='home'),
+  
     
     path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'),
      name='password_reset'),
 
     path('password-reset/done', auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'),
      name='password_reset_done'),
-     path('', include('pages.urls')),
+     path('', include('blogs.urls')),
 
      path('password-reset-confirm/<uidb64>/<token>/',
      auth_views.PasswordResetConfirmView.as_view(

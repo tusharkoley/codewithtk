@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+   {% block title %} Connect4 {% endblock%}
+
+
+
+
+{% block content %}
+  {% load static %}
+
+  <div class="container" align='center'>
+
+
+    <h1 >Welcome to Connect4</h1>
+    <p >Player1 will be Turquise and Player2 will be Pink</p>
+   <h3 align ='center'> Players Message is here</h3>
+
+</div>
+<div class="container" align='center'>
+
+
+      <table align='center'>
+
+            <tr>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+            </tr>
+            <tr>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+            </tr>
+            <tr>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+            </tr>
+            <tr>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+            </tr>
+            <tr>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+            </tr>
+            <tr>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+              <td class="dot"></td>
+            </tr>
+
+
+          </table>
+
+
+        </div>
+
+    <script  src="{% static 'games/js/main.js' %}">
+      </script>
+
+    <div class="container" align='center'>
+      <h3><br></h3>
+       <a class="btn btn-primary" href="{% url 'games:connect4' %}" role="button">Restart Game</a> <br>
+
+    </div>
+
+{% endblock %}

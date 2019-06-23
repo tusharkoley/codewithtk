@@ -1,0 +1,10 @@
+
+.dot {
+  height: 80px;
+  width: 80px;
+  background-color: rgb(160,160,160);
+  border-radius: 50%;
+  display: inline-block;
+  border : 2px solid black;
+  margin: 1px;
+}

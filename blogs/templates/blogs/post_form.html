@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+   {% block title %} New Post {% endblock%}
+
+{% load bootstrap4 %}
+
+
+{% block content %}
+
+<div class="d-flex justify-content-center " >
+
+    <div class="row text-center padding">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+              <legend class="border-bottom mb-4">Blog Post</legend>
+
+                {% bootstrap_form form %}
+
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-info" type="submit">Post</button>
+            </div>
+        </form>
+
+         <script>var editor = new MediumEditor('.editable');</script>
+         <br>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
