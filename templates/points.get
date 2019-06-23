@@ -1,0 +1,45 @@
+points.get
+
+log.entry.prop.points.get=storeId,saleTransactionCode, loyaltyTransactionId, transactionDateTime
+log.caling.prop.points.get=storeId,saleTransactionCode, loyaltyTransactionId, transactionDateTime
+log.called.prop.points.get=receiptMessage,delayedPointsBalance,accountStatus,cardStatus
+log.called.prop.points.get=receiptMessage,delayedPointsBalance,accountStatus,cardStatus
+
+
+
+
+
+
+
+points.post
+
+log.entry.prop.points.post=sroreID, transactionDateTime, products
+log.caling.prop.points.post=sroreID, transactionDateTime, products
+log.called.prop.points.post=loyaltyTransactionId, message, status
+log.called.prop.points.post=loyaltyTransactionId, message, status
+
+
+benefits.put
+
+log.entry.prop.benefits.put=sroreID, transactionDateTime, products
+log.caling.prop.benefits.put=sroreID, transactionDateTime, products
+log.called.prop.benefits.put=loyaltyTransactionId, message, status
+log.called.prop.benefits.put=loyaltyTransactionId, message, status
+
+
+benefits.put
+
+log.entry.prop.redeem.put=sroreID, transactionDateTime, products
+log.caling.prop.redeem.put=sroreID, transactionDateTime, products
+log.called.prop.redeem.put=loyaltyTransactionId, message, status
+log.called.prop.redeem.put=loyaltyTransactionId, message, status
+
+benefits.delete
+
+log.entry.prop.redeem.delete=sroreID, transactionDateTime, products
+log.caling.prop.redeem.delete=sroreID, transactionDateTime, products
+log.called.prop.redeem.delete=loyaltyTransactionId, message, status
+log.called.prop.redeem.delete=loyaltyTransactionId, message, status
+
+
+
