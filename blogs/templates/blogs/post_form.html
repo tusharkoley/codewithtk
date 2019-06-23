@@ -5,7 +5,7 @@
 
    {% block title %} New Post {% endblock%}
 
-{% load bootstrap4 %}
+{% load crispy_forms_tags %}
 
 
 {% block content %}
@@ -18,7 +18,7 @@
             <fieldset class="form-group">
               <legend class="border-bottom mb-4">Blog Post</legend>
 
-                {% bootstrap_form form %}
+                 {{ form|crispy }}
 
             </fieldset>
             <div class="form-group">
