@@ -3,9 +3,9 @@ import re
 
 from word import doc2text
 
-def procResume ():
+def procResume (f):
 
-	text = doc2text.process('resume.docx')
+	text = doc2text.process(f)
 
 	'''
 	with open('demofile.txt','r') as f:

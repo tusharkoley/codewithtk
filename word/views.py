@@ -19,9 +19,9 @@ def upload_doc(request):
 		if form.is_valid():
 			f=request.FILES['file']
 			if '.docx' in str(f):
-				handle_uploaded_file(f)  
+				#handle_uploaded_file(f)  
 				print('****After Handle File')    
-				dictResults=procResume()
+				dictResults=procResume(f)
 				return render(request, 'word/resume.html', {'dictResults':dictResults})
 			else:
 				print('****Incorrect File format***')
