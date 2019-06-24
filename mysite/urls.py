@@ -33,9 +33,10 @@ urlpatterns = [
     path('games/',include('games.urls')),
     path('team/', views.team, name ='team'),
     path('index/', views.index, name ='index'),
+    path('notification/',views.send_notification_all, name='notification'),
 
     path('contact_us/', views.contact_us, name ='contact_us'),
-    path('home/', views.home, name ='home'),
+    path('', views.home, name ='home'),
   
     
     path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'),
@@ -43,7 +44,7 @@ urlpatterns = [
 
     path('password-reset/done', auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'),
      name='password_reset_done'),
-     path('', include('blogs.urls')),
+     path('blogs/', include('blogs.urls')),
 
      path('password-reset-confirm/<uidb64>/<token>/',
      auth_views.PasswordResetConfirmView.as_view(

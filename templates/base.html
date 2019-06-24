@@ -23,6 +23,7 @@
 </head>
 <body>
 
+
 <!-- Navigation -->
 
 <nav id ="navbar" class="navbar navbar-expand-md navbar-dark bg-dark sticy-top" > 
@@ -41,15 +42,7 @@
         <a class="nav-link" href="{% url 'home' %}">Home</a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'team' %}">Team</a>
-      </li>
       
-      <!--
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'contact_us' %}">Connect</a>
-      </li>
-    -->
 
     <li class="nav-item dropdown ">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -79,6 +72,17 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'games:index' %}"> Games</a>
       </li>
+
+     
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'team' %}">Team</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact_us' %}"> Connect</a>
+      </li>
+      
+  
    
 
       {% if user.is_authenticated %}

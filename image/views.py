@@ -41,7 +41,6 @@ class ImageCreateView(LoginRequiredMixin,CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
 
-   
 
         if form.instance.image.url.find('default.jpg') >=0 :
             messages.error(self.request, f'Please select an Image!')

@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
+
 {% load static %}
 
-   {% block title %} Contact  Us {% endblock%}
+   {% block title %} Send Nofification {% endblock%}
 
 {% load crispy_forms_tags %}
 
@@ -13,18 +14,19 @@
 
 <div class="d-flex justify-content-center " style="background-color:#41dff4" > 
 
+    {% if user.username == 'admin' %}
 
     <div class="row text-center padding">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-              <legend class="border-bottom mb-4">Contact Us</legend>
+              <legend class="border-bottom mb-4">Send Nofification to All Registered Users</legend>
 
                  {{ form|crispy }}
 
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-info" type="submit">Send Message</button>
+                <button class="btn btn-info" type="submit">Send Nofification</button>
             </div>
         </form>
 
@@ -32,6 +34,10 @@
          <br>
 
     </div>
+    {%else%}
+    <h1> <br><br>Sorry, You are not Authorized to send Nofification  <br><br></h1>
+
+    {% endif %}
 
  </div>
 </div>
