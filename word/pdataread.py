@@ -1,33 +1,27 @@
 
 import re
 
-
 from word import doc2text
 
+def procResume ():
 
-def procResume ( path):
-
-	text = doc2text.process('/home/tushar/djangoproject/word/Tushar.docx')
-
+	text = doc2text.process('resume.docx')
 
 	'''
 	with open('demofile.txt','r') as f:
 		content = f.read().lower().replace('\n',' ')
 		'''
 
-
 	sections =['address','professional experience', 'experience summary','education', 
 				'certificate','major projects','award','training', 'technical skills']
 
 	content =text.lower().replace('\n',' ')
-
 
 	for sec in sections:
 		rstr='\n'+sec
 		content = content.replace(sec,rstr,1)
 		
 
-	#print(content)
 
 	dictPtrn = { 'name':r'Tushar\s\w+', 
 				 'phone':r'\+\d+.\d+', 
@@ -37,7 +31,7 @@ def procResume ( path):
 				 'professional experience':r'professional experience.*',
 				 'education':r'education.*',
 				 'award':r'award.*',
-				 'technical skills':r'technical skills.*',
+				 'skills':r'skills.*',
 				 'training':r'training.*',
 				 'major projects':'major projects.*'
 
@@ -45,8 +39,7 @@ def procResume ( path):
 
 	dictData ={}
 
-				
-
+			
 	for key, value in dictPtrn.items() :
 
 		srtPat=value
@@ -75,6 +68,13 @@ def procResume ( path):
 
 
 
+def handle_uploaded_file(f):
+	print(f)
+	with open('resume.docx', 'wb+') as destination:
+		for chunk in f.chunks():
+			destination.write(chunk)
 
 
 
+ 
+            

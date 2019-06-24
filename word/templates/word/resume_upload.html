@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+   {% block title %} Upload  Resume {% endblock%}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<div class="container">
+
+<div class="d-flex justify-content-center " style="background-color:#41dff4" > 
+
+
+    <div class="row text-center padding">
+        <form method="POST"  enctype="multipart/form-data" >
+            {% csrf_token %}
+            <fieldset class="form-group">
+              <legend class="border-bottom mb-4"><br>Please  Upload your Resume</legend>
+              <ul> <p>This Application will read any RESUME in a document(.docx) <br>   form and  Extract the crtitical information <br> like Name, Email, phone no etc.</p></ul>
+
+                 {{ form|crispy }}
+
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-info" type="submit">Upload</button>
+            </div>
+        </form>
+
+         
+         <br>
+
+    </div>
+
+ </div>
+</div>
+
+
+{% endblock %}

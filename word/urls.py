@@ -4,7 +4,7 @@ from . import views
 
 app_name = 'word'
 urlpatterns = [
-    path('', views.resume, name='word')
+    path('', views.upload_doc, name='word')
 
 
 ]
