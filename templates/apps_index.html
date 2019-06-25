@@ -15,8 +15,8 @@
 	 	<ul>
 	 		 <li><a href="{% url 'blogs' %}"> Blogs </a></li>
 	 		 <p> This application was developed for posting Blogs about any subject. It has the capability to create, update, delete and the list of blogs. It can also filter the blogs based on the user id. Pagination is also implemented as part of this application. Currently the page size is set to 5.  The users require to log in in order to post a new blog. However, anybody can read the content of the blogs.</p>
-	 		  <li><a href="{% url 'polls:index' %}"> Polls </a></li>
-	 		  <p> This application is capable of capturing the vote count based on the different questions and choices. The results pages show the consolidated results of vote count by different users.</p>
+	 		  <li><a href="{% url 'games:index' %}"> Games </a></li>
+	 		
 	 		  <li><a href="{% url 'login' %}"> Login </a></li>
 	 		  <li><a href="{% url 'logout' %}"> Logout </a></li>
 	 		  <li><a href="{% url 'register' %}"> Register </a></li>
@@ -33,7 +33,7 @@
 	 	<h4> Word/Excel Processing </h4>
 	 	<ul>
 	 		 <li><a href="{% url 'word:word' %}"> Resume Processor </a></li>
-	 		 <p> This is application is designed to extract the personal information from the resume. I have provided my resume as a sample. Please note some of my personal data has been tempered for security reason. <br> The original word document can be found <a href="https://drive.google.com/file/d/1v95Bf3YCi0qOhr89pgKO9I2Jk38V1Q60/view">here</a></p>
+	 		 <p> This is application is designed to extract the personal information from the resume. Please upload any word format (.docx) resume and see the results</a></p>
 	 	</ul>
 	 </div>
 
@@ -56,6 +56,7 @@
 
 	  <div class="text-left">
 	 	<h4> Fun Games </h4>
+		  <li><a href="{% url 'games:index' %}"> Games </a></li>
 	 </div>
 
 </div>
