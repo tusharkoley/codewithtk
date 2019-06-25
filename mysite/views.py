@@ -38,12 +38,29 @@ def send_notification_all( request):
 			users=User.objects.all()
 			to_email=[user.email for user in users]
 			sender_email='info.dgtit@gmail.com'
-
 			subject=form.cleaned_data['subject'] 
-			message=form.cleaned_data['message']
+
+			msg_list=[]
+
+			for user in users:
+				message=form.cleaned_data['message']
+				message=" Hi {}, \n {}".format(user.username.title(), message)
+				to_email=[]
+				to_email.append(user.email)
+			
+				msg=(subject,message,sender_email,to_email)
+				msg_list.append(msg)
+
+			mesg_tuple=tuple(msg_list)
+			send_mass_mail(mesg_tuple,fail_silently=True)
+			
+			
+			
 
 			
-			send_mail(subject,message,sender_email,to_email,fail_silently=True,)
+			
+			
+			
 			return render (request, "notification_confirm.html",{})
             
 		else:
