@@ -1,0 +1,50 @@
+
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+   {% block title %} Tic Tac Toe {% endblock%}
+
+{% block extra_head %} 
+
+   
+    <link rel="stylesheet" href="{% static 'games/css/tt_toe.css' %}">
+
+{% endblock %}
+
+{% block content %}
+ 
+
+    <div class="container">
+
+  <div class="jumbotron">
+    <h1>Welcome to Tic Tac Toe!</h1>
+
+      
+
+  <p><a id='b' class="btn btn-primary btn-lg" href="#" role="button">Restart!</a></p>
+</div>
+    <table align='center'>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+    </table>
+
+
+   <script type="text/javascript" src="{% static 'games/js/tt_toe.js' %}"></script>
+   </div>
+  {% endblock %}

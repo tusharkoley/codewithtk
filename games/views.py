@@ -7,3 +7,6 @@ def connect4(request):
 
 def index(request):
     return render(request,'games/index.html')
+
+def tt_toe(request):
+    return render(request,'games/tt_toe.html')
