@@ -26,7 +26,6 @@ def upload_doc(request):
 			else:
 				print('****Incorrect File format***')
 				messages.warning(request, '**Incorrect File format**.')
-				
 
 			
 		else:

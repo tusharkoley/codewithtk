@@ -32,6 +32,7 @@ urlpatterns = [
     path('image/',include('image.urls')),
     path('games/',include('games.urls')),
     path('team/', views.team, name ='team'),
+    path('gallery/', include('gallery.urls')),
     path('index/', views.index, name ='index'),
     path('notification/',views.send_notification_all, name='notification'),
 
