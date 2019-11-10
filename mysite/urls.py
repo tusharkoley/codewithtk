@@ -35,6 +35,7 @@ urlpatterns = [
     path('gallery/', include('gallery.urls')),
     path('index/', views.index, name ='index'),
     path('notification/',views.send_notification_all, name='notification'),
+    path('activate/<slug:uidb64>/<slug:token>)/', user_views.activate, name='activate'),
 
     path('contact_us/', views.contact_us, name ='contact_us'),
     path('', views.home, name ='home'),

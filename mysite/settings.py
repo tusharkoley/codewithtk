@@ -26,7 +26,7 @@ SECRET_KEY = '!ys9xpe-_7$f044bz_08ycyy6nk!qbwu1-%3aw3&5hu_r1huyr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','wycombecare.co.uk','178.79.142.210','www.dgtit.com','dgtit.com','northhertsdrumlessons.co.uk','ohmexico.co.uk','tumbleweave.org']
+ALLOWED_HOSTS = ['127.0.0.1','wycombecare.co.uk','178.79.142.210','www.dgtit.com','dgtit.com','northhertsdrumlessons.co.uk','ohmexico.co.uk','tumbleweave.org']
 
 
 # Application definition

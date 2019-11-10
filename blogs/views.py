@@ -28,6 +28,14 @@ class PostListView(ListView):
     ordering = ['-date_posted']
     paginate_by = 5
 
+    def get_context_data(self, **kwargs):
+        context = super(PostListView, self).get_context_data(**kwargs)
+        
+        context['object_list'] = self.model.objects.all()
+        context['published_blogs'] = self.model.objects.filter(
+            status='Published')
+        return context
+
 
 class UserPostListView(ListView):
     model = Post

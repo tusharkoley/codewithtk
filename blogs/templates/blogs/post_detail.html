@@ -9,8 +9,14 @@
 
  {% block content %}
 
+ {% if object.status == 'Drafted' %}
+  <hr>
+ <h2>Thanks for you Post,<br> It will be available after admin approves your post.</h2>
+  <hr>
+  {% endif %}
 
         <article class="media content-section">
+          
           <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
           <div class="media-body">
             <div class="article-metadata">
