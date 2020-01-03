@@ -16,19 +16,36 @@
 <!--- Cards -->
 <div class="container-fluid padding" id ="team" style="background-image: url('{% static 'img/bkg/login.jpg' %}');  background-repeat: no-repeat;   background-attachment: fixed;" >
   <div class="row padding">
-    <div class="col-md-4">
+  <div class="col-md-6"> 
+    <table>
+      <tr>
+        <td>
       <div class="card">
         <img class="card-img-top" src= " {% static 'img/logo/Tushar.jpg' %}">
         <div class="card-body">
           <h4 class="card-title"> Tushar Koley </h4>
-          <p class="card-text"> Tushar has 15 years of expereince in the It industry in various technologies including Python/Django, Java, HTML, CSS, MySQl, Oracle etc.</p>
+          <p class="card-text"> Tushar has 16 years of expereince in the It industry in various technologies including Machine Larning,Python/Django, Java, HTML, CSS, MySQl, Oracle etc.</p>
           <a href="https://www.linkedin.com/in/tushar-koley-38978018" class="btn btn-outline-secondary"> See Profile </a>
-
         </div>
-      </div>
-    </div>
-
-    
+      </td>
+      <td>
+        <div class="card">
+          <img class="card-img-top" src= " {% static 'img/logo/Runa.jpg' %}">
+          <div class="card-body">
+            <h4 class="card-title"> Runa Koley </h4>
+            <p class="card-text"> Runa is experienced and passionate photographer. She has about 10 years of photography expereince. 
+              Some of her portfollo photography is <a href="https://www.dgtit.com/gallery/">here</a></p>
+            <br>
+            
+            <a href="https://www.linkedin.com/in/runa-koley-5a859919a/" class="btn btn-outline-secondary"> See Profile </a>
+          </div>
+        </div>
+      </td>
+    <!-- </div> -->
+   </tr>
+  </table>
+  </div>
+</div>
 </div>
 
 {% endblock%} 
