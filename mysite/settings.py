@@ -32,7 +32,7 @@ SECRET_KEY = config['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','wycombecare.co.uk','www.dgtit.com','dgtit.com','northhertsdrumlessons.co.uk','ohmexico.co.uk','tumbleweave.org']
+ALLOWED_HOSTS = ['127.0.0.1','www.gusjmarket.nl','wycombecare.co.uk','www.codewithtk.net','codewithtk.net','northhertsdrumlessons.co.uk','ohmexico.co.uk','tumbleweave.org']
 
 
 # Application definition
