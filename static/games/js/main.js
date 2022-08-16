@@ -13,6 +13,8 @@ var player1 = {
 
 }
 
+
+
 var player2 = {
   name:str2,
   color:'#f441b5',
