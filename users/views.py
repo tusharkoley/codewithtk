@@ -10,6 +10,7 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from .tokens import account_activation_token
 from django.contrib.auth import login
+from django.utils.encoding import force_str
 
 def register(request):
     if request.method == 'POST':
@@ -73,7 +74,7 @@ def profile(request):
 
 def activate(request, uidb64, token):
      try:
-        uid = force_text(urlsafe_base64_decode(uidb64))
+        uid = force_str(urlsafe_base64_decode(uidb64))
         user = User.objects.get(pk=uid)
      except(TypeError, ValueError, OverflowError, User.DoesNotExist):
         user = None
